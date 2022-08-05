@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "5RhehE85C3pR/zhXkfcGV1cTpJv249GPQmMoMTqICVFmQmf+gjsl6eTHntKaefjMiBTHfm5oe9TSRhmWt98pvw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\harndorfer\\Documents\\devsrc\\UserStories\\3rdQuarterSprint10_2022\\21973EngHousePosition\\queue_demo\\queue_demo_three.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\harndorfer\\.nuget\\packages\\microsoft.aspnetcore.spaservices.extensions\\5.0.17\\microsoft.aspnetcore.spaservices.extensions.5.0.17.nupkg.sha512",
+    "C:\\Users\\harndorfer\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\5.0.0\\microsoft.extensions.fileproviders.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\harndorfer\\.nuget\\packages\\microsoft.extensions.fileproviders.physical\\5.0.0\\microsoft.extensions.fileproviders.physical.5.0.0.nupkg.sha512",
+    "C:\\Users\\harndorfer\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\5.0.0\\microsoft.extensions.filesystemglobbing.5.0.0.nupkg.sha512",
+    "C:\\Users\\harndorfer\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,53 @@
+<!-- Application when not expanded -->
+<div style="width: 100%; text-align: center; height: 20px;" *ngIf='openQueue === false'>
+  <div (click)='expand()' style="display: flex;">
+    <p style="margin-bottom: 0px; font-size: 0.80rem; flex: 25%;"><b>Queue {{ activeQueue.name }}</b></p>
+    <p style="margin-bottom: 0px; font-size: 0.80rem; flex: 25%;">Agents: {{ activeQueue.avaliableAgents }}</p>
+    <p style="margin-bottom: 0px; font-size: 0.80rem; flex: 25%;">QCalls: {{ activeQueue.queuedCalls }}</p>
+    <p style="margin-bottom: 0px; font-size: 0.80rem; flex: 25%;">Calls: {{ activeQueue.totalCalls }}</p>
+  </div>
+</div>
+
+<!-- Application when the app is opened -->
+<div style="width: 100%; text-align: center; overflow: hidden;" *ngIf='openQueue === true'>
+  <p style="margin-bottom: 0px; font-size: 0.80rem; margin-top: 5px; float: right;" (click)='collapse()'><b>x</b></p>
+  <br>
+  <div class="icon_holder">
+    <div class="icon_four">
+      <button mat-raised-button style="background-color: #00adbb; color: white"><mat-icon>call</mat-icon></button>
+    </div>
+    <div class="icon_four">
+      <button mat-raised-button style="background-color: #00adbb; color: white"><mat-icon>trending_up</mat-icon></button>
+    </div>
+    <div class="icon_four">
+      <button mat-raised-button style="background-color: #00adbb; color: white"><mat-icon>track_changes</mat-icon></button>
+    </div>
+    <!-- This button is used to demonstrate the api call for updating a queue -->
+    <div class="icon_four">
+      <button mat-raised-button style="background-color: #00adbb; color: white" (click)="updateQueueData()"><mat-icon>snooze</mat-icon></button>
+    </div>
+  </div>
+  <br>
+  <table mat-table [dataSource]="queues" class="mat-elevation-z8" style="width: 100%;">
+    <ng-container matColumnDef="queueName">
+      <th mat-header-cell *matHeaderCellDef style="text-align: center;">Queue</th>
+      <td mat-cell *matCellDef="let queue"> {{queue.name}} </td>
+    </ng-container>
+    <ng-container matColumnDef="avaliableAgents">
+      <th mat-header-cell *matHeaderCellDef style="text-align: center;">Avaliable Agents</th>
+      <td mat-cell *matCellDef="let queue"> {{queue.avaliableAgents}} </td>
+    </ng-container>
+    <ng-container matColumnDef="queuedCalls">
+      <th mat-header-cell *matHeaderCellDef style="text-align: center;">Queued Calls</th>
+      <td mat-cell *matCellDef="let queue"> {{queue.queuedCalls}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"
+        (click)="clickTableRow(row); selectedRow = selectedRow === row ? null : row"
+        id="queueRow"
+        [ngClass]="{'selected': row === selectedRow}">
+    </tr>
+  </table>
+</div>
+
