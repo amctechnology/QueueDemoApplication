@@ -13,7 +13,7 @@ There are 5 configurations that must be in place when creating a new app for thi
 
 ## Development server
 
-In the Program.cs file, your license will need to be added with the proper password.
+In the Program.cs file, your certificate will need to be added with the proper password. Next you will need to navigate into the ClientApp folder and run "npm install" inorder to obtain the node modules.
 Run `dotnet run` within the main project. Navigate to `https://127.0.0.1:5001/`. When running the application, the application can be hosted by softwares such as Fiddler.
 Take the URL at which this application is being hosted, naviagate to Creator Studio. If an app was already created, navigate to edit the app, go to configs, if not a URL config, create one.
 Name it `URL` and insert the hosted url link as the value. 
