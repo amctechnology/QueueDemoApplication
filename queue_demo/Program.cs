@@ -48,7 +48,8 @@ namespace queue_demo
                             serverOptions.Listen(IPAddress.Loopback, 5000);
                             serverOptions.Listen(IPAddress.Loopback, 5001, listenOptions =>
                             {
-                                listenOptions.UseHttps(@"C:\tmp\servercc2022.pfx", "amctechnology");
+                                // Fill this out with license information
+                                listenOptions.UseHttps(@"C:\tmp\localhost.pfx", "password");
                             });
                         }
                     })
