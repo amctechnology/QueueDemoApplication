@@ -48,7 +48,7 @@ namespace queue_demo
                             serverOptions.Listen(IPAddress.Loopback, 5000);
                             serverOptions.Listen(IPAddress.Loopback, 5001, listenOptions =>
                             {
-                                // Fill this out with license information
+                                // Fill this out with certificate information
                                 listenOptions.UseHttps(@"C:\tmp\localhost.pfx", "password");
                             });
                         }
